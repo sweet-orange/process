@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>通过加载状态事件制作滚动条-css3小动画</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="loading">
+        <div class="toppic"></div>
+    </div>
+    <img src="images/img1.jpg" alt="">
+    <script>
+        $(".loading .toppic").animate({
+            width: "20%"
+        }, 100)
+    </script>
+
+
+    <img src="images/img2.jpg" alt="">
+    <img src="images/img3.jpg" alt="">
+    <script>
+        $(".loading .toppic").animate({
+            width: "40%"
+        }, 100)
+    </script>
+    <img src="images/img4.jpg" alt="">
+    <img src="images/img5.jpg" alt="">
+    <img src="images/img6.jpg" alt="">
+    <script>
+        $(".loading .toppic").animate({
+            width: "80%"
+        }, 100)
+    </script>
+    <img src="images/img5.jpg" alt="">
+    <img src="images/img6.jpg" alt="">
+
+    <script>
+        $(".loading .toppic").animate({
+            width: "1oo%"
+        }, 100, function() {
+            $(".loading").fadeOut();
+        })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>通过加载状态事件制作滚动条-css3小动画</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="loading">
+        <div class="pic">
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+        </div>
+    </div>
+    <img src="images/img1.jpg" alt="">
+    <img src="images/img2.jpg" alt="">
+    <img src="images/img3.jpg" alt="">
+    <img src="images/img4.jpg" alt="">
+    <img src="images/img5.jpg" alt="">
+    <img src="images/img6.jpg" alt="">
+
+    <script>
+        document.onreadystatechange = function() {
+            var state = document.readyState;
+            if (state == 'complete') {
+                $(".loading").fadeOut();
+            }
+        }
+    </script>
+
+</body>
+
+</html>
